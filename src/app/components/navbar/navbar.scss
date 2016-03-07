@@ -1,3 +1,20 @@
-.acme-navbar-text{
-  color: white;
+.navbar {
+    background: url(/assets/images/navbar_image.jpg)
 }
+
+.img-home{
+    background: url(/assets/images/navbar_backraund.jpg)
+    url(/assets/images/home_w.ico)
+}
+a {
+	color: blue;
+	}
+    
+a:link {
+	color: blue;
+	}
+    
+	a:hover {
+	color: orange;
+	font-style: italic;
+	}
