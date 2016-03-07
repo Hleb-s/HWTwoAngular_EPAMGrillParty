@@ -2,19 +2,16 @@
     background: url(/assets/images/navbar_image.jpg)
 }
 
-.img-home{
-    background: url(/assets/images/navbar_backraund.jpg)
-    url(/assets/images/home_w.ico)
+.img-navbar{
+    height: 25px;
+    margin: 0 0 5px 0;
 }
 a {
-	color: blue;
+	color: black;
 	}
-    
-a:link {
-	color: blue;
-	}
-    
-	a:hover {
-	color: orange;
-	font-style: italic;
+
+a:hover {
+	color: midnightblue;
+	font-style: oblique;
+    font-weight: bold;
 	}

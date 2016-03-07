@@ -4,7 +4,6 @@
 
   angular
     .module('hwtwoAngularEpamgrillParty')
-    .constant('malarkey', malarkey)
     .constant('moment', moment);
 
 })();
