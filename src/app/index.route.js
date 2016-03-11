@@ -16,7 +16,7 @@
       })
       .state('register', {
       url:"/",
-      template:'register/'
+      template:'<register/>'
       });
 
     $urlRouterProvider.otherwise('/');

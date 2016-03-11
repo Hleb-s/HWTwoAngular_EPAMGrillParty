@@ -9,7 +9,13 @@
       <ul class="nav navbar-nav">
         <li class="active"><a ng-href="#"><img class="img-navbar" src="/assets/images/home.ico" ></img> Home</a></li>
         <li><a ng-href="#"><img class="img-navbar" src="/assets/images/person.ico" ></img> Participants</a></li>
-        <li><a ng-click="register()"><img class="img-navbar" src="/assets/images/register.ico" ></img> Registration</a></li>
+        <li>
+            <a ng-href="" class="link" ng-click="vm.register()">
+                <img class="img-navbar" src="/assets/images/register.ico" /> 
+                Registration
+                </a>
+        </li>
+        <li><div  ng-click="register()"> Registration</div></li>
       </ul>
     </div>
   </div>

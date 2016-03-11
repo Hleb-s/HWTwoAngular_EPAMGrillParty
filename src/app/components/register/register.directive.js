@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('registerModule', [])
-  .directive('register', reg);
+  .directive('register', register);
 
-function reg($state) {
+function register($state) {
   return {
     templateUrl: 'app/components/register/register.html',
     link: function (scope) {
