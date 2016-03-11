@@ -16,9 +16,7 @@
       })
       .state('register', {
       url:"/",
-        templateUrl: 'app/components/register/register.html',
-        //controller: 'MainController',
-        controllerAs: 'vm'
+        templateUrl: 'app/components/register/register.html'
       });
 
     $urlRouterProvider.otherwise('/');

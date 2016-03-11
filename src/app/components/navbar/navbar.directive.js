@@ -13,7 +13,6 @@
       
     link: function (scope, element, attrs) {
       scope.register = function register() {
-        $log.debug('22222');
         $state.go('register');
       }
     },
