@@ -7,9 +7,8 @@
 
   /** @ngInject */
   //function MainController($scope, $state, webDevTec, register) {
-    function MainController($scope, $state, $log) {
-    var vm = this;
-
+    function MainController() {
+    //var vm = this;
     activate();
 
     function activate() {

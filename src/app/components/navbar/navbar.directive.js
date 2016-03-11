@@ -6,12 +6,12 @@
     .directive('acmeNavbar', acmeNavbar);
 
   /** @ngInject */
-  function acmeNavbar($state, $log) {
+  function acmeNavbar($state) {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       
-    link: function (scope, element, attrs) {
+    link: function (scope) {
       scope.register = function register() {
         $state.go('register');
       }
@@ -25,7 +25,7 @@
 
     /** @ngInject */
     function NavbarController() {
-      var vm = this;
+      //var vm = this;
 
     }
     
