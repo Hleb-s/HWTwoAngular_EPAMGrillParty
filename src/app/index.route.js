@@ -10,14 +10,22 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'vm'
+        templateUrl: 'app/home/home.html',
+        controller: 'HomeController',
+        controllerAs: 'homeContr'
       })
       .state('register', {
-      url:"/",
-        templateUrl: 'app/components/register/register.html'
-      });
+        url: '/',
+        templateUrl: 'app/register/register.html',
+        controller: 'RegisterController',
+        controllerAs: 'regContr'
+      })
+      .state('people', {
+        url: '/',
+        templateUrl: 'app/people/people.html',
+        controller: 'PeopleController',
+        controllerAs: 'peopleContr'
+      })
 
     $urlRouterProvider.otherwise('/');
   }

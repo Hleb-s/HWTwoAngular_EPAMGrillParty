@@ -16,6 +16,10 @@
   }
 }
 
+body {
+    background: url(/assets/images/grass.jpg);
+    background-size: cover;
+}
 
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject

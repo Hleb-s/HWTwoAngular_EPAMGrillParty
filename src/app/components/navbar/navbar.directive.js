@@ -10,15 +10,18 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
-      
-    link: function (scope) {
-      scope.register = function register() {
-        $state.go('register');
-      }
-    },
       controller: NavbarController,
       controllerAs: 'vm',
-      bindToController: true
+      bindToController: true,
+        link: function (scope) {
+            scope.register = function register() {
+                $state.go('register');
+            }
+            
+             scope.peopleOpen = function register() {
+                $state.go('people');
+            }
+        }
     };
 
     return directive;

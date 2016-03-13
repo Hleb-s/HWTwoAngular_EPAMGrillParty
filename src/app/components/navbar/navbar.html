@@ -1,14 +1,14 @@
 <nav class="navbar navbar-static-top" role = "navigation">
   <div class="container">
     <div class="navbar-header">
-            <img class="navbar-brand" src="/assets/images/logo.png" class="logo">
-            <a class="navbar-brand" href = "#">EPAM Grill Party</a>
+            <img class="navbar-brand logo" src="/assets/images/logo.png">
+            <div class="navbar-brand" href = "">EPAM Grill Party</div>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a ng-href="#"><img class="img-navbar" src="/assets/images/home.ico" ></img> Home</a></li>
-        <li><a ng-href="#"><img class="img-navbar" src="/assets/images/person.ico" ></img> Participants</a></li>
+        <li><a href="" class="link" ng-click="peopleOpen()"><img class="img-navbar" src="/assets/images/person.ico" ></img> Participants</a></li>
         <li><a href="" class="link" ng-click="register()"><img class="img-navbar" src="/assets/images/register.ico" />Registration</a>
         </li>
       </ul>

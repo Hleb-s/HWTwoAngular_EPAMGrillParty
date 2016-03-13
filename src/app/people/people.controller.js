@@ -3,11 +3,10 @@
 
   angular
     .module('hwtwoAngularEpamgrillParty')
-    .controller('MainController', MainController);
+    .controller('PeopleController', PeopleController);
 
   /** @ngInject */
-  //function MainController($scope, $state, webDevTec, register) {
-    function MainController() {
+    function PeopleController() {
     //var vm = this;
     activate();
 
