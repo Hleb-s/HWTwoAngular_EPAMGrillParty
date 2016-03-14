@@ -18,7 +18,7 @@
                 $state.go('register');
             }
             
-             scope.peopleOpen = function register() {
+             scope.peopleOpen = function peopleOpen() {
                 $state.go('people');
             }
         }

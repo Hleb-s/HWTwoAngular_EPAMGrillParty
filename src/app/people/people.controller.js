@@ -6,12 +6,14 @@
     .controller('PeopleController', PeopleController);
 
   /** @ngInject */
-    function PeopleController() {
-    //var vm = this;
-    activate();
+    function PeopleController($scope,$log, webDevTec) {
+    var vm = this;
 
-    function activate() {
+    activatePeople();
 
+    function activatePeople() {
+    vm.peopleList = webDevTec.getTec();
+    $log.debug(111, vm.peopleList);    
     }
   }
 })();
