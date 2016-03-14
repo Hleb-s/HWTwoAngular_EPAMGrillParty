@@ -11,17 +11,21 @@
       restrict: 'AE',
       templateUrl: 'app/components/caserecord/caserecord.html',
       scope: {
-        Itemd: '='
+        items: '=',
       },
-        link: function (scope, elem, attr) {
-            //scope.Items = true;
-            //$log.debug(999999, $scope.$parent.peopleList);
-            //if(scope.Itemd)
-            $log.debug(999999, scope.Itemd );
-            
+        link: function (scope) {
+            scope.GetPhoto = function GetPhoto(item) {
+                if(item && item.fotourl && item.fotourl!=='')
+                    return item.fotourl;
+                else{
+                    if(item.sex && item.sex === 1)
+                        return '/assets/PhotoPersons/noPhotoMan.jpg'
+                    else
+                        return '/assets/PhotoPersons/noPhotoWomen.jpg'
+                }
+            } 
         }
     };
     return directive;
   }
-
 })();

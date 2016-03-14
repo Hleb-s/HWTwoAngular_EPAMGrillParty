@@ -1,5 +1,17 @@
-<div ng-repeat="n in Items track by $index">
-  {{n}}
+<div>
+    <ul class="hr">
+        <div ng-repeat="item in items track by $index">
+            <li>
+                <div class="card">
+                    <p><img class="imgcard" ng-src="{{GetPhoto(item)}}"></p>
+                    <span class="disable-item" style="color:{{['red','green'][+item.isDoc]}};" ng-click="SelectDoc(item)">{{['(no document)','(have a document)'][+item.isDoc]}}</span>
+                    <p class="text-center"><span class=""></span></p>
+                        <h4>Robert Smith</h4>
+                        
+                    <p class="text-success">Will be there</p>
+                </div>
+                </br>
+            <li>
+        </div>
+    </ul>
 </div>
-
-<div>{{Items}}</div>

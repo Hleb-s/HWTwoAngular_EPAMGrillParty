@@ -9,10 +9,36 @@
   function webDevTec() {
     var data = [
       {
-        'title': 'AngularJS',
-        'url': 'www.mail.ru',
-        'description': 'HTML enhanced for web apps!',
-        'logo': 'angular.png'
+        'firstname': 'Vasya',
+        'lastname': 'Pupkin',
+        'sex': '1',
+        'email': 'VasyaPupkin@epam.com',
+        'fotourl': '',
+        'iswill': '1',
+      },
+      {
+        'firstname': 'AngularJS',
+        'lastname': 'www.mail.ru',
+        'sex': '0',
+        'email': 'HTML enhanced for web apps!',
+        'fotourl': '/assets/PhotoPersons/user1.png',
+        'iswill': '2',
+      },
+      {
+        'firstname': 'AngularJS',
+        'lastname': 'www.mail.ru',
+        'sex': '0',
+        'email': 'HTML enhanced for web apps!',
+        'fotourl': '/assets/PhotoPersons/user7.png',
+        'iswill': '3',
+      },
+      {
+        'firstname': 'AngularJS',
+        'lastname': 'www.mail.ru',
+        'sex': '1',
+        'email': 'HTML enhanced for web apps!',
+        'fotourl': '/assets/PhotoPersons/user3.png',
+        'iswill': '1',
       }
     ];
 
