@@ -5,8 +5,7 @@
       .module('hwtwoAngularEpamgrillParty')
       .service('employees', employees);
 
-  /** @ngInject */
-  function employees($log) {
+  function employees() {
     var data = [
       {
         'id': '1',
@@ -59,9 +58,14 @@
     ];
 
     this.getEmployees = getEmployees;
+    this.GetEmployeesforId = GetEmployeesforId;
 
     function getEmployees() {
       return angular.fromJson(data) || [];
+    }
+    
+    function GetEmployeesforId(id) {
+        return angular.fromJson(data.filter( function(itemArray){ return itemArray.id === id; } )) || [];
     }
   }
 

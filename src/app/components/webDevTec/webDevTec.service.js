@@ -5,55 +5,39 @@
       .module('hwtwoAngularEpamgrillParty')
       .service('webDevTec', webDevTec);
 
-  /** @ngInject */
-  function webDevTec() {
+  function webDevTec(employees) {
     var data = [
       {
-        'firstname': 'Vasya',
-        'lastname': 'Pupkin',
-        'sex': '1',
-        'email': 'VasyaPupkin@epam.com',
-        'fotourl': '',
+        'id': '1',
+        'idemployees': '1',
         'iswill': '1',
         'notalone':'false',
         'nameguest':''
       },
       {
-        'firstname': 'Oksana',
-        'lastname': 'Morozova',
-        'sex': '0',
-        'email': 'Morozova_Oksana@epam.com',
-        'fotourl': '/assets/PhotoPersons/user1.png',
+        'id': '2',
+        'idemployees': '2',
         'iswill': '2',
         'notalone':'false',
         'nameguest':''
       },
       {
-        'firstname': 'Polina',
-        'lastname': 'Grishina',
-        'sex': '0',
-        'email': 'Grishina_Polina@epam.com',
-        'fotourl': '/assets/PhotoPersons/user7.png',
+        'id': '3',
+        'idemployees': '3',
         'iswill': '3',
         'notalone':'false',
         'nameguest':''
       },
       {
-        'firstname': 'Pavel',
-        'lastname': 'Stadnev',
-        'sex': '1',
-        'email': 'Stadnev_Pavel@epam.com',
-        'fotourl': '/assets/PhotoPersons/user3.png',
+        'id': '4',
+        'idemployees': '4',
         'iswill': '1',
         'notalone':'false',
         'nameguest':''
       },
-            {
-        'firstname': 'Ekaterina',
-        'lastname': 'Petrova',
-        'sex': '0',
-        'email': 'Petrova_Ecaterina@epam.com',
-        'fotourl': '',
+      {
+        'id': '5',
+        'idemployees': '5',
         'iswill': '',
         'notalone':'false',
         'nameguest':''
@@ -63,6 +47,9 @@
     this.getTec = getTec;
 
     function getTec() {
+        data.forEach( function(item){ 
+            item.employees = employees.GetEmployeesforId(item.idemployees); 
+        } );
       return data;
     }
   }

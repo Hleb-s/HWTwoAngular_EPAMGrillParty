@@ -13,7 +13,7 @@
       scope: {
         items: '='
       },
-        link: function (scope) {
+        link: function (scope) {           
             scope.GetPhoto = function (item) {
                 if(item && item.fotourl && item.fotourl!=='')
                     return item.fotourl;

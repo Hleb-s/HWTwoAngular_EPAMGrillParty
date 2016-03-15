@@ -14,10 +14,10 @@
         vm.dataItem = defaultData();
         function defaultData() {
             return {
-            firstname: '123',
-            lastname: '213123',
+            firstname: '',
+            lastname: '',
             sex:'',
-            email: 'dasdasd@epam.com',
+            email: '',
             fotourl:'',
             iswill: '',
             notalone: false,

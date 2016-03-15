@@ -65,10 +65,10 @@
         </div>
       </div>
 
-      <div id="interested-group" class="form-group">
+      <div id="iswill-group" class="form-group">
         <label>Are you going to be there?<span class="required">&nbsp;*</span></label>
         <select class="form-control" required ng-model="regContr.dataItem.iswill" name="iswill"
-                ng-options="iswill.id as iswill.name for iswill in regContr.statusList">
+                ng-options="stat.id as stat.name for stat in regContr.statusList">
           <option selected disabled>Select an option</option>
         </select>
 
@@ -81,8 +81,8 @@
       </div>
       <div id="guest-name" class="form-group" ng-if="regContr.dataItem.notalone">
         <label>Name of Guest<span class="required">&nbsp;*</span></label>
-        <input type="text" class="form-control" name="guestName" ng-minlength=3 ng-maxlength=20 required
-               ng-model="regContr.dataItem.guestName"/>
+        <input type="text" class="form-control" name="nameguest" ng-minlength=3 ng-maxlength=20 required
+               ng-model="regContr.dataItem.nameguest"/>
 
         <div class="error-group" ng-if="registerForm.guestName.$touched && registerForm.guestName.$invalid">
           <small class="error" ng-show="registerForm.guestName.$error.required">Guest name is required.</small>
