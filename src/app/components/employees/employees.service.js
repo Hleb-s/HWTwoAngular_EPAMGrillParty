@@ -45,10 +45,10 @@
         'lastname': 'Petrova',
         'sex': '0',
         'email': 'Petrova_Ecaterina@epam.com',
-        'fotourl': '/assets/PhotoPersons/user2.png'
+        'fotourl': '/assets/PhotoPersons/user6.png'
       },
       {
-        'id': '5',
+        'id': '6',
         'firstname': 'Igor',
         'lastname': 'Emelin',
         'sex': '1',

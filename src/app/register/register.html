@@ -99,7 +99,7 @@
           <small class="error"><span ng-bind="regContr.regError"></span></small>
         </div>
       </div>
-      <button type="submit" class="btn btn-success btn-lg" ng-disabled="registerForm.$invalid || regError">
+      <button type="submit" class="btn btn-success btn-lg" ng-disabled="registerForm.$invalid || regContr.regError">
         <span class="glyphicon glyphicon-flash"></span> Submit!
       </button>
     </form>

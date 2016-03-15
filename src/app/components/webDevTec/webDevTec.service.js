@@ -38,19 +38,27 @@
       {
         'id': '5',
         'idemployees': '5',
-        'iswill': '',
+        'iswill': '3',
         'notalone':'false',
         'nameguest':''
       }
     ];
 
     this.getTec = getTec;
+    this.addIteninArray = addIteninArray;
 
     function getTec() {
         data.forEach( function(item){ 
             item.employees = employees.GetEmployeesforId(item.idemployees); 
         } );
       return data;
+    }
+    
+    function addIteninArray(param) {
+        var newid = Math.max(data.id);
+        console.log(newid);
+        param.id = newid;
+        data.push(param);
     }
   }
 

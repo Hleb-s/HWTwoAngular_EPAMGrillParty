@@ -6,7 +6,7 @@
     .controller('RegisterController', RegisterController);
 
   /** @ngInject */
-    function RegisterController($log, employees) {
+    function RegisterController($log, employees, webDevTec) {
     var vm = this;
     activate();
 
@@ -49,7 +49,6 @@
             var epamEmployees = employees.getEmployees();
             
             if (item == 'firstname') {
-                $log.debug(param,item);
                 found = epamEmployees.filter( function(itemArray){ return itemArray.firstname === param; } );
             } 
             else 
@@ -80,23 +79,31 @@
             var employee = validatedataItem();
             if (employee == null) return;
 
-            //epamersStorage.saveEpamer(employee);
-            //if (vm.dataItem.bringGuest) {
-            //  epamersStorage.saveGuest(vm.dataItem.guestName);
-            //}
+var newdata = {       
+        id: '',
+        idemployees: '',
+        iswill: '',
+        notalone:'',
+        nameguest:''
+    }
+    newdata.idemployees = employee[0].id;
+    newdata.iswill = vm.dataItem.iswill;
+    newdata.notalone = vm.dataItem.notalone;
+    newdata.nameguest = vm.dataItem.nameguest;
+$log.debug(newdata);
+            webDevTec.addIteninArray(newdata);
+
             //$state.go('home');
         };
         
         function validatedataItem() {
             vm.regError = '';
             var found = null;
-            var employees = employees.getEmployees();
-                employees.forEach(function (employee) {
-                    if (vm.dataItem.firstname === employee.firstname &&
+            var employeesArray = employees.getEmployees();
+            found = employeesArray.filter( function(employee){
+                 return vm.dataItem.firstname === employee.firstname &&
                     vm.dataItem.lastname === employee.lastname &&
-                    vm.dataItem.email === employee.email) {
-                    found = employee;
-                    }
+                    vm.dataItem.email === employee.email; 
                 });
             if (found == null) {
                 vm.regError = 'The list of employees EPAM employee was not found';
