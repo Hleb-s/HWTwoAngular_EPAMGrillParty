@@ -4,11 +4,10 @@
             <li>
                 <div class="card">
                     <p><img class="imgcard" ng-src="{{GetPhoto(item)}}"></p>
-                    <span class="disable-item" style="color:{{['red','green'][+item.isDoc]}};" ng-click="SelectDoc(item)">{{['(no document)','(have a document)'][+item.isDoc]}}</span>
-                    <p class="text-center"><span class=""></span></p>
-                        <h4>Robert Smith</h4>
-                        
-                    <p class="text-success">Will be there</p>
+                    <img class="img-card-stat" title="Yes" ></img> 
+                    <img class="img-card-stat" ng-src="{{GetImgStatus(item)}}">                   
+                    <span class="text-primary span-size-fio" ng-bind="item.firstname+' '+item.lastname"></span >
+                    <p class="text-muted"><span class="span-size" ng-bind="item.email"></span ></p>
                 </div>
                 </br>
             <li>

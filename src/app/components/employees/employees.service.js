@@ -3,67 +3,65 @@
 
   angular
       .module('hwtwoAngularEpamgrillParty')
-      .service('webDevTec', webDevTec);
+      .service('employees', employees);
 
   /** @ngInject */
-  function webDevTec() {
+  function employees($log) {
     var data = [
       {
+        'id': '1',
         'firstname': 'Vasya',
         'lastname': 'Pupkin',
         'sex': '1',
         'email': 'VasyaPupkin@epam.com',
-        'fotourl': '',
-        'iswill': '1',
-        'notalone':'false',
-        'nameguest':''
+        'fotourl': ''
       },
       {
+        'id': '2',
         'firstname': 'Oksana',
         'lastname': 'Morozova',
         'sex': '0',
         'email': 'Morozova_Oksana@epam.com',
-        'fotourl': '/assets/PhotoPersons/user1.png',
-        'iswill': '2',
-        'notalone':'false',
-        'nameguest':''
+        'fotourl': '/assets/PhotoPersons/user1.png'
       },
       {
+        'id': '3',
         'firstname': 'Polina',
         'lastname': 'Grishina',
         'sex': '0',
         'email': 'Grishina_Polina@epam.com',
-        'fotourl': '/assets/PhotoPersons/user7.png',
-        'iswill': '3',
-        'notalone':'false',
-        'nameguest':''
+        'fotourl': '/assets/PhotoPersons/user7.png'
       },
       {
+        'id': '4',
         'firstname': 'Pavel',
         'lastname': 'Stadnev',
         'sex': '1',
         'email': 'Stadnev_Pavel@epam.com',
-        'fotourl': '/assets/PhotoPersons/user3.png',
-        'iswill': '1',
-        'notalone':'false',
-        'nameguest':''
+        'fotourl': '/assets/PhotoPersons/user3.png'
       },
-            {
+      {
+        'id': '5',
         'firstname': 'Ekaterina',
         'lastname': 'Petrova',
         'sex': '0',
         'email': 'Petrova_Ecaterina@epam.com',
-        'fotourl': '',
-        'iswill': '',
-        'notalone':'false',
-        'nameguest':''
+        'fotourl': '/assets/PhotoPersons/user2.png'
+      },
+      {
+        'id': '5',
+        'firstname': 'Igor',
+        'lastname': 'Emelin',
+        'sex': '1',
+        'email': 'emelin_Igor@epam.com',
+        'fotourl': '/assets/PhotoPersons/user3.png'
       }
     ];
 
-    this.getTec = getTec;
+    this.getEmployees = getEmployees;
 
-    function getTec() {
-      return data;
+    function getEmployees() {
+      return angular.fromJson(data) || [];
     }
   }
 
