@@ -8,7 +8,7 @@
   function employees() {
     var data = [
       {
-        'id': '1',
+        'id': 1,
         'firstname': 'Vasya',
         'lastname': 'Pupkin',
         'sex': '1',
@@ -16,7 +16,7 @@
         'fotourl': ''
       },
       {
-        'id': '2',
+        'id': 2,
         'firstname': 'Oksana',
         'lastname': 'Morozova',
         'sex': '0',
@@ -24,7 +24,7 @@
         'fotourl': '/assets/PhotoPersons/user1.png'
       },
       {
-        'id': '3',
+        'id': 3,
         'firstname': 'Polina',
         'lastname': 'Grishina',
         'sex': '0',
@@ -32,7 +32,7 @@
         'fotourl': '/assets/PhotoPersons/user7.png'
       },
       {
-        'id': '4',
+        'id': 4,
         'firstname': 'Pavel',
         'lastname': 'Stadnev',
         'sex': '1',
@@ -40,7 +40,7 @@
         'fotourl': '/assets/PhotoPersons/user3.png'
       },
       {
-        'id': '5',
+        'id': 5,
         'firstname': 'Ekaterina',
         'lastname': 'Petrova',
         'sex': '0',
@@ -48,7 +48,7 @@
         'fotourl': '/assets/PhotoPersons/user6.png'
       },
       {
-        'id': '6',
+        'id': 6,
         'firstname': 'Igor',
         'lastname': 'Emelin',
         'sex': '1',

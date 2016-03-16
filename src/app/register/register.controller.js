@@ -79,18 +79,17 @@
             var employee = validatedataItem();
             if (employee == null) return;
 
-var newdata = {       
-        id: '',
-        idemployees: '',
-        iswill: '',
-        notalone:'',
-        nameguest:''
-    }
-    newdata.idemployees = employee[0].id;
-    newdata.iswill = vm.dataItem.iswill;
-    newdata.notalone = vm.dataItem.notalone;
-    newdata.nameguest = vm.dataItem.nameguest;
-$log.debug(newdata);
+        var newdata = {       
+                id: '',
+                idemployees: '',
+                iswill: '',
+                notalone:'',
+                nameguest:''
+            }
+            newdata.idemployees = employee[0].id;
+            newdata.iswill = vm.dataItem.iswill;
+            newdata.notalone = vm.dataItem.notalone;
+            newdata.nameguest = vm.dataItem.nameguest;
             webDevTec.addIteninArray(newdata);
 
             //$state.go('home');
