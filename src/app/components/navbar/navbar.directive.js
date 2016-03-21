@@ -6,15 +6,17 @@
     .directive('acmeNavbar', acmeNavbar);
 
   /** @ngInject */
-  function acmeNavbar($state) {
+  function acmeNavbar($state, $http) {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
-      controller: NavbarController,
-      controllerAs: 'vm',
       bindToController: true,
         link: function (scope) {
-            scope.register = function register() {
+            scope.homeOpen = function home() {
+                $state.go('home');
+            }
+            
+            scope.registerOpen = function register() {
                 $state.go('register');
             }
             
@@ -25,14 +27,6 @@
     };
 
     return directive;
-
-    /** @ngInject */
-    function NavbarController() {
-      //var vm = this;
-
-    }
-    
-    
   }
 
 })();

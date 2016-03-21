@@ -13,7 +13,8 @@
       scope: {
         items: '='
       },
-        link: function (scope) {           
+        link: function (scope) {
+                      
             scope.GetPhoto = function (item) {
                 if(item && item.fotourl && item.fotourl!=='')
                     return item.fotourl;
@@ -24,6 +25,7 @@
                         return '/assets/PhotoPersons/noPhotoWomen.jpg'
                 }
             }
+            
             scope.GetImgStatus = function (item) {
                 if(item && item.iswill && item.iswill ==='1')
                     return '/assets/images/yes32.ico';

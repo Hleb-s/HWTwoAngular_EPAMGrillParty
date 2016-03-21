@@ -6,7 +6,7 @@
       .service('webDevTec', webDevTec);
 
   function webDevTec(employees) {
-    var data = [
+    var dataItems = [
       {
         'id': 1,
         'idemployees': 1,
@@ -43,9 +43,14 @@
         'nameguest':''
       }
     ];
+    
+    var data = dataItems;
 
     this.getTec = getTec;
+    this.getTecLite = getTecLite;
     this.addIteninArray = addIteninArray;
+    this.clearData = clearData;
+    this.createData = createData;
 
     function getTec() {
         data.forEach( function(item){ 
@@ -53,6 +58,18 @@
         } );     
       return data;
     }
+    
+    function getTecLite() {   
+      return data;
+    }    
+    
+    function clearData() {
+        data = [];
+    }
+    
+    function createData() {
+        data = dataItems;
+    } 
     
     function getNewId() {
         var newid = 0;
@@ -66,7 +83,6 @@
     
     function addIteninArray(param) {
         var newid = getNewId();
-        console.log(11111,newid);
         param.id = newid;
         data.push(param);
     }

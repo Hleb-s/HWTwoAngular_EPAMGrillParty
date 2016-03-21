@@ -1,9 +1,12 @@
 <div class="container" ng-controller="PeopleController">
 
   <div class="jumbotron text-center col-md-12">
-    <h2>List of participants</h2>
+    <h2 ng-if="peopleContr.peopleList.length > 0">List of participants</h2>
+    <h2 ng-if="peopleContr.peopleList.length <= 0">There is no one present yet</h2>
     </br>
-
-<case-record items="peopleContr.peopleList"></case-record>
+    <case-record items="peopleContr.peopleList"></case-record>
+    </br>
+    <div ng-if="peopleContr.peopleList.length > 0" class="text-muted div-for-click" ng-click="peopleContr.clearList()">Clear "List of participants" (Test)</div>
+    <div ng-if="peopleContr.peopleList.length <= 0" class="text-muted div-for-click" ng-click="peopleContr.createList()">Create "List of participants" (Test)</div>
   </div>
 </div>

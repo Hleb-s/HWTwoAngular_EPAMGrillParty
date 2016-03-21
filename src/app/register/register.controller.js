@@ -6,7 +6,7 @@
     .controller('RegisterController', RegisterController);
 
   /** @ngInject */
-    function RegisterController($log, employees, webDevTec) {
+    function RegisterController($log, $state, employees, webDevTec) {
     var vm = this;
     activate();
 
@@ -92,12 +92,13 @@
             newdata.nameguest = vm.dataItem.nameguest;
             webDevTec.addIteninArray(newdata);
 
-            //$state.go('home');
+            $state.go('people');
         };
         
         function validatedataItem() {
             vm.regError = '';
             var found = null;
+            var participantsFound = null;
             var employeesArray = employees.getEmployees();
             found = employeesArray.filter( function(employee){
                  return vm.dataItem.firstname === employee.firstname &&
@@ -106,7 +107,20 @@
                 });
             if (found == null) {
                 vm.regError = 'The list of employees EPAM employee was not found';
+                return found;
             }
+             
+            var participants = webDevTec.getTecLite();
+            participantsFound = participants.filter( function(participant){
+                 return participant.idemployees === found[0].id; 
+                });
+
+            if (participantsFound != null && participantsFound.length > 0) {
+                            $log.debug(participantsFound,11111111, found[0].id);
+                vm.regError = 'This Email is already registered';
+                return found = null;
+            }  
+            
             return found;
         }
 

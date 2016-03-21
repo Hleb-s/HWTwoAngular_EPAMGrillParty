@@ -1,18 +1,39 @@
 .logo{
     height: 70px;
-    //margin: 0 0 5px 0;
 }
 
 .img-navbar{
     height: 25px;
     margin: 0 0 5px 0;
 }
+
 a {
 	color: black;
 	}
 
 a:hover {
 	color: midnightblue;
-	font-style: oblique;
     font-weight: bold;
+    text-decoration:none;
 	}
+
+nav{
+    box-shadow:0 1px 1px #ccc;
+}
+    
+nav a{
+	display:inline-block;
+	font-size:16px;
+	line-height:1;
+	text-transform: uppercase;
+
+	-webkit-transition:background-color 0.55s;
+	-moz-transition:background-color 0.55s;
+	transition:background-color 0.55s;
+}      
+
+ul.home .home,
+ul.people .people,
+ul.register .register{
+	background-color: #ccc;
+}
