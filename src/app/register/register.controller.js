@@ -6,7 +6,7 @@
     .controller('RegisterController', RegisterController);
 
   /** @ngInject */
-    function RegisterController($log, $state, employees, webDevTec) {
+    function RegisterController($log, $scope, $state, employees, webDevTec) {
     var vm = this;
     activate();
 
@@ -91,8 +91,7 @@
             newdata.notalone = vm.dataItem.notalone;
             newdata.nameguest = vm.dataItem.nameguest;
             webDevTec.addIteninArray(newdata);
-
-            $state.go('people');
+            $scope.peopleOpen();
         };
         
         function validatedataItem() {
@@ -116,7 +115,6 @@
                 });
 
             if (participantsFound != null && participantsFound.length > 0) {
-                            $log.debug(participantsFound,11111111, found[0].id);
                 vm.regError = 'This Email is already registered';
                 return found = null;
             }  
