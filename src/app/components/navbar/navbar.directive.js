@@ -26,6 +26,13 @@
                 scope.active='register';
                 $state.go('register');
             }
+            
+            scope.apiOpen = function register() {
+                scope.active='api';
+                $state.go('api');
+            }
+            
+            scope.homeOpen();
         }
     };
 

@@ -26,6 +26,12 @@
         controller: 'PeopleController',
         controllerAs: 'peopleContr'
       })
+      .state('api', {
+        url: '/',
+        templateUrl: 'app/api/api.html',
+        controller: 'APIController',
+        controllerAs: 'apiContr'
+      })
 
     $urlRouterProvider.otherwise('/');
   }
