@@ -8,30 +8,35 @@
   /** @ngInject */
   function APIController($http, $log) {
     var vm = this;
-    loadingWeather();
+    vm.isSearching = false;
+    vm.searchText = '';
+    vm.loadingWeather = loadingWeather;
 
     function loadingWeather() {
-      $http({
+        $log.debug(vm.searchText);
+        if(vm.searchText==='') {
+            return;
+        }
+        vm.isSearching = true;
+        $http({
         method: 'GET',
         url: 'https://api.flickr.com/services/rest',
         params: {
-            method: 'flickr.photos.search',
-            //api_key: '',
-            text: 'girl',
+            method: 'flickr.photos.getRecent',
+            api_key: 'c10ca38bab37b488d506e9e2316f6a15',
+            text: vm.searchText,
             format: 'json',
             nojsoncallback: 1            
         },
-      }).then(function successCallback(response) {
+        }).then(function successCallback(response) {
           $log.debug(response);
-          //http://opogode.ru/api-v1
-          //http://www.betravel.ru/iata-city-code.php?country=KZ&city=KGF
-          //http://opogode.ua/api/v1/forecasts.json?city=Karaganda
-        //vm.error = false;
-        //vm.users = vm.users.concat(response.data);
-        //lastId = vm.users[vm.users.length - 1].id;
-      }, function errorCallback(response) {
-        vm.error = true;
-      });
+          
+          
+            vm.isSearching = false;
+        }, function errorCallback(response) {
+            vm.error = true;
+            vm.isSearching = false;
+        });
     }
   }
 })();
