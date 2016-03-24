@@ -1,13 +1,13 @@
 <div>
     <ul class="hr">
-        <div ng-repeat="item in items track by $index">
+        <div class="animate-repeat" ng-repeat="item in items | filter:search">
             <li>
                 <div class="card">
-                    <p><img class="imgcard" ng-src="{{GetPhoto(item.employees[0])}}"></p>
+                    <p><img class="imgcard" ng-src="{{GetPhoto(item.employees)}}"></p>
                     <img class="img-card-stat" ></img> 
                     <img class="img-card-stat" ng-src="{{GetImgStatus(item)}}">                   
-                    <span class="text-primary span-size-fio" ng-bind="item.employees[0].firstname+' '+item.employees[0].lastname"></span >
-                    <p class="text-muted"><span class="span-size" ng-bind="item.employees[0].email"></span ></p>
+                    <span class="text-primary span-size-fio" ng-bind="item.employees.firstname+' '+item.employees.lastname"></span >
+                    <p class="text-muted"><span class="span-size" ng-bind="item.employees.email"></span ></p>
                 </div>
                 </br>
             <li>

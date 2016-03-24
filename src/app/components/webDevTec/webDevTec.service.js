@@ -54,7 +54,7 @@
 
     function getTec() {
         data.forEach( function(item){ 
-            item.employees = employees.GetEmployeesforId(item.idemployees); 
+            item.employees = employees.GetEmployeesforId(item.idemployees)[0]; 
         } );     
       return data;
     }

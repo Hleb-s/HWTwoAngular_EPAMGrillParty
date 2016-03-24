@@ -11,10 +11,10 @@
       restrict: 'AE',
       templateUrl: 'app/components/caserecord/caserecord.html',
       scope: {
-        items: '='
+        items: '=',
+        search: '='
       },
         link: function (scope) {
-                      
             scope.GetPhoto = function (item) {
                 if(item && item.fotourl && item.fotourl!=='')
                     return item.fotourl;
