@@ -13,11 +13,13 @@
     function loadingWeather() {
       $http({
         method: 'GET',
-        url: 'http://opogode.ua/api/v1/forecasts.json?city=Karaganda',
-        
-        xhrFields: {
-            withCredentials: true,
-            crossDomain: true,
+        url: 'https://api.flickr.com/services/rest',
+        params: {
+            method: 'flickr.photos.search',
+            //api_key: '',
+            text: 'girl',
+            format: 'json',
+            nojsoncallback: 1            
         },
       }).then(function successCallback(response) {
           $log.debug(response);
