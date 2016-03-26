@@ -1,6 +1,6 @@
 <div class="container" ng-controller="APIController">   
-    <div class="col-md-12 well">             
-        <div ng-if="!apiContr.isSearching" class="col-lg-6">          
+    <div>             
+        <div ng-if="!apiContr.isSearching">          
             <form ng-submit="apiContr.loadingWeather()">
                 <div layout="row">
                     <md-input-container class="long">
@@ -13,19 +13,18 @@
                 </div>
              
             </form>
-               
+            <md-card ng-repeat="photo in apiContr.photos">
+                    <img class="md-card-image" ng-src="{{photo.src}}" alt=""/>
+                    <h3>{{photo.title}}</h3>
+            </md-card>
         </div>
         
-        
         <div class="row" ng-if="apiContr.isSearching">    
-        <div class="col-md-12">        
+        <div>        
             <div class="loader">Loading...</div>
             </div>
         </div>
-        <div> 
-        <band-gallery ng-if="apiContr.resultItems" gallery-imgs='apiContr.resultItems' nav-top-btn="true" nav-down-btn="true" page-nr="true" timer="0"></band-gallery>
-    </div>
+        
     </div>
     
 </div>
-

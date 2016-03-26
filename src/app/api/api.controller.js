@@ -10,14 +10,21 @@
     var vm = this;
     vm.isSearching = false;
     vm.searchText = '';
-    vm.resultItems = [];
+    vm.photos = [];
     vm.loadingWeather = loadingWeather;
+    
+    
+    
+    ///---
+
+
+    ///---
 
     function loadingWeather() {
-        $log.debug(vm.searchText);
         if(vm.searchText==='') {
             return;
         }
+        vm.photos = [];
         vm.isSearching = true;
         $http({
         method: 'GET',
@@ -30,10 +37,12 @@
             nojsoncallback: 1            
         },
         }).then(function successCallback(response) {
+            $log.debug(response);
             response.data.photos.photo.forEach( function(picture){ 
-                var item = {url:''};
-                item.url = 'https://farm'+picture.farm+'.staticflickr.com/'+picture.server+'/'+picture.id+'_'+picture.secret+'_b.jpg';
-                vm.resultItems.push(item);
+                var item = {src:'', title: ''};
+                item.src = 'https://farm'+picture.farm+'.staticflickr.com/'+picture.server+'/'+picture.id+'_'+picture.secret+'_b.jpg';
+                item.title = picture.title;
+                vm.photos.push(item);
             });          
             vm.isSearching = false;
         }, function errorCallback(response) {
