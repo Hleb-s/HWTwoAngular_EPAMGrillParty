@@ -1,21 +1,31 @@
-<div class="container" ng-controller="RegisterController">   
-    <div class="col-md-12  well">             
+<div class="container" ng-controller="APIController">   
+    <div class="col-md-12 well">             
         <div ng-if="!apiContr.isSearching" class="col-lg-6">          
             <form ng-submit="apiContr.loadingWeather()">
                 <div layout="row">
-                <md-input-container class="long">
-                    <label>Search for ...</label>
-                    <input ng-model="apiContr.searchText">
-                </md-input-container>
-                <md-input-container>
-                    <button class="btn btn-default" ng-click="apiContr.loadingWeather();" type="button">Go!</button>
-                </md-input-container>
+                    <md-input-container class="long">
+                        <label>Search for ...</label>
+                        <input ng-model="apiContr.searchText">
+                    </md-input-container>
+                    <md-input-container>
+                        <button class="btn btn-default" ng-click="apiContr.loadingWeather();" type="button">Go!</button>
+                    </md-input-container>
                 </div>
+             
             </form>
+               
         </div>
-        <div ng-if="apiContr.isSearching">
-            <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+        
+        
+        <div class="row" ng-if="apiContr.isSearching">    
+        <div class="col-md-12">        
+            <div class="loader">Loading...</div>
+            </div>
         </div>
+        <div> 
+        <band-gallery ng-if="apiContr.resultItems" gallery-imgs='apiContr.resultItems' nav-top-btn="true" nav-down-btn="true" page-nr="true" timer="0"></band-gallery>
     </div>
+    </div>
+    
 </div>
 

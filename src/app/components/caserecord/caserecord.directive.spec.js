@@ -41,10 +41,5 @@
       expect(vm.relativeDate).toEqual(jasmine.any(String));
       expect(vm.relativeDate).toEqual('a day ago');
     });
-
-    // it('should call Moment', function() {
-    //   console.log($window.moment)
-    //   expect($window.moment).toHaveBeenCalled();
-    // });
   });
 })();

@@ -10,6 +10,7 @@
     var vm = this;
     vm.isSearching = false;
     vm.searchText = '';
+    vm.resultItems = [];
     vm.loadingWeather = loadingWeather;
 
     function loadingWeather() {
@@ -29,9 +30,11 @@
             nojsoncallback: 1            
         },
         }).then(function successCallback(response) {
-          $log.debug(response);
-          
-          
+            response.data.photos.photo.forEach( function(picture){ 
+                var item = {url:''};
+                item.url = 'https://farm'+picture.farm+'.staticflickr.com/'+picture.server+'/'+picture.id+'_'+picture.secret+'_b.jpg';
+                vm.resultItems.push(item);
+            });          
             vm.isSearching = false;
         }, function errorCallback(response) {
             vm.error = true;

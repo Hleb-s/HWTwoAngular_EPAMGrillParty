@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('hwtwoAngularEpamgrillParty', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap','ngMaterial']);
+    .module('hwtwoAngularEpamgrillParty', ['ngAnimate', 'ngCookies', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ui.bootstrap','ngMaterial']);
 
 })();

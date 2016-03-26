@@ -2,7 +2,8 @@
   "name": "hwtwoAngularEpamgrillParty",
   "version": "0.0.0",
   "dependencies": {
-    "angular-material": "^1.0.6"
+    "angular-material": "^1.0.6",
+    "jquery-ui": "^1.10.5"
   },
   "scripts": {
     "test": "gulp test"
