@@ -13,9 +13,17 @@ a:hover {
     text-decoration:none;
 	}
 
-nav{
-    //box-shadow:0 1px 1px #ccc;
+.navbar{  
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1030;
+    height: 60px;
+    background-color: beige;
 }
+
     
 nav a{
     color: black;

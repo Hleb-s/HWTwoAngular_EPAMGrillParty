@@ -3,3 +3,13 @@ img.register-img{
     width: 50px;
     margin: 5px 0 0 0;
 }
+
+.required, .error {
+  color: red;
+}
+
+.form-control.ng-dirty.ng-invalid {
+  border-color: rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  transition: all 0.5s ease 0s;
+}

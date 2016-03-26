@@ -19,21 +19,7 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 }
 
 body {
-    background: url(/assets/images/grass.jpg);
-    background-size: cover;
-}
-.filter {
-  margin: 30px 0 20px
-}
-
-.required, .error {
-  color: red;
-}
-
-.form-control.ng-dirty.ng-invalid {
-  border-color: rgba(255, 0, 0, 0.4);
-  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
-  transition: all 0.5s ease 0s;
+    padding-top:60px;
 }
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
@@ -46,7 +32,7 @@ body {
 .view-animate-container {
   position:relative;
   height:100px!important;
-  //overflow: hidden; // из-за неё не работает скрол, разобратся почему и как исправить
+  overflow: auto;
 }
 
 .view-animate {
@@ -62,16 +48,20 @@ body {
   left:0;
   right:0;
   bottom:0;
-  padding:101px;
+  padding:70px;
+  overflow: hidden;
 }
 
 .view-animate.ng-enter {
-  left:100%;
+    overflow: hidden;
+    left:100%;
 }
 .view-animate.ng-enter.ng-enter-active {
-  left:0;
+    overflow: hidden;
+    left:0;
 }
 .view-animate.ng-leave.ng-leave-active {
-  left:-100%;
+    overflow: hidden;
+    left:-100%;
 }
 //---

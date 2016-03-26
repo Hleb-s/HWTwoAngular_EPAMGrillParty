@@ -47,6 +47,7 @@
         'email': 'Petrova_Ecaterina@epam.com',
         'fotourl': '/assets/PhotoPersons/user6.png'
       },
+      //this piple not list
       {
         'id': 6,
         'firstname': 'Igor',
@@ -54,6 +55,14 @@
         'sex': '1',
         'email': 'emelin_Igor@epam.com',
         'fotourl': '/assets/PhotoPersons/user3.png'
+      },
+      {
+        'id': 7,
+        'firstname': 'Petr',
+        'lastname': 'Pervii',
+        'sex': '1',
+        'email': 'Pervii_Petr@epam.com',
+        'fotourl': ''
       }
     ];
 
