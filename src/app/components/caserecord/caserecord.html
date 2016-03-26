@@ -2,12 +2,18 @@
     <ul class="hr">
         <div class="animate-repeat" ng-repeat="item in items | filter:search">
             <li>
-                <div class="card">
+                <div class="card box">
                     <p><img class="imgcard" ng-src="{{GetPhoto(item.employees)}}"></p>
                     <img class="img-card-stat" ></img> 
                     <img class="img-card-stat" ng-src="{{GetImgStatus(item)}}">                   
                     <span class="text-primary span-size-fio" ng-bind="item.employees.firstname+' '+item.employees.lastname"></span >
                     <p class="text-muted"><span class="span-size" ng-bind="item.employees.email"></span ></p>
+                    <div ng-if="item.iswill && item.iswill !=='2'" class="option">
+                    <span class="link">
+                        <span ng-if="item.notalone" class="text-success span-size-fio" ng-bind="item.nameguest"></span >
+                        <span ng-if="!item.notalone" class="text-warning span-size-fio">One person</span >
+                    </span>
+                </div>
                 </div>
                 </br>
             <li>

@@ -47,6 +47,14 @@
         'email': 'Petrova_Ecaterina@epam.com',
         'fotourl': '/assets/PhotoPersons/user6.png'
       },
+      {
+        'id': 8,
+        'firstname': 'Dysa',
+        'lastname': 'Nechaeva',
+        'sex': '0',
+        'email': 'Nechaeva_Dysa@epam.com',
+        'fotourl': ''
+      },
       //this piple not list
       {
         'id': 6,
