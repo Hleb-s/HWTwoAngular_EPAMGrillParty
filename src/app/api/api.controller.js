@@ -12,13 +12,6 @@
     vm.searchText = '';
     vm.photos = [];
     vm.loadingWeather = loadingWeather;
-    
-    
-    
-    ///---
-
-
-    ///---
 
     function loadingWeather() {
         if(vm.searchText==='') {
